@@ -14,9 +14,9 @@ This is the official web page for the contents of the lectures from the Deep Lea
 
 <a name='lecturers'></a>
 ### Lecturers
-Dario Garcia-Gasulla (Coordinator)
-Marc Casas
-Javier Bejar
+- Dario Garcia-Gasulla (Coordinator)
+- Marc Casas
+- Javier Bejar
 
 <a name='lessons'></a>
 ### Lessons
@@ -25,3 +25,4 @@ Javier Bejar
       <a href="mlp-convnets/">
       Multilayer Perceptron and Conv Nets
       </a>
+      [Multilayer Perceptron and Conv Nets](mlp-convnets/)
