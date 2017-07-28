@@ -6,11 +6,6 @@
  url: "http://upc-mai-dl.github.io"
  github_username: upc-mai-dl
  # Build settings
- markdown: kramdown
+ markdown: maruku
  permalink: pretty
 
- highlighter: rouge
- kramdown:
-   input: GFM
-   auto_ids: true
-   syntax_highlighter: rouge
