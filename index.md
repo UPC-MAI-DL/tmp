@@ -22,4 +22,7 @@ This is the official web page for the contents of the lectures from the Deep Lea
 ### Lessons
 
 #### Lesson 1
-[Multilayer Perceptron and Conv Nets](mlp-convnets/)
+Multilayer Perceptron and Conv Nets
+- [Theory](mlp-convnets-theory/)
+- [Lab guided](mlp-convnets-lab-guided/)
+- [lab autonomous](mlp-convnets-lab-autonomous/)
