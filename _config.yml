@@ -6,6 +6,6 @@
  url: "http://upc-mai-dl.github.io"
  github_username: upc-mai-dl
  # Build settings
- markdown: maruku
+ markdown: kramdown
  permalink: pretty
 
