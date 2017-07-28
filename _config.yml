@@ -1,0 +1,16 @@
+# Site settings
+ title: Deep Learning, MAI at UPC
+ email: dario.garcia@bsc.es
+ description: "Site for the Deep Learning course at the UPC. Powered by BSC."
+ baseurl: ""
+ url: "http://upc-mai-dl.github.io"
+ github_username: upc-mai-dl
+ # Build settings
+ markdown: kramdown
+ permalink: pretty
+
+ highlighter: rouge
+ kramdown:
+   input: GFM
+     auto_ids: true
+     syntax_highlighter: rouge
