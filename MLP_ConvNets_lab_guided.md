@@ -1,6 +1,4 @@
 ---
-layout: page
-mathjax: true
 permalink: /mlp-convnets-lab-guided/
 ---
 
