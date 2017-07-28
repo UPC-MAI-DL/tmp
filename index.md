@@ -1,4 +1,4 @@
-# Deep Learning - Master in Artificial Intelligence - Universitat Politècnica de Catalunya
+[//]: <> # Deep Learning - Master in Artificial Intelligence - Universitat Politècnica de Catalunya
 
 The Table of Contents:
 
