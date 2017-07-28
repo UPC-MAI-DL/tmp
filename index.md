@@ -1,4 +1,4 @@
-[//]: <> # Deep Learning - Master in Artificial Intelligence - Universitat Politècnica de Catalunya
+# Deep Learning - Master in Artificial Intelligence - Universitat Politècnica de Catalunya
 
 The Table of Contents:
 
@@ -14,7 +14,7 @@ This is the official web page for the contents of the lectures from the Deep Lea
 
 <a name='lecturers'></a>
 ### Lecturers
-- Dario Garcia-Gasulla (Coordinator)
+- Dario Garcia-Gasulla (Coordinator) (BSC, dario.garcia@bsc.es)
 - Marc Casas
 - Javier Bejar
 
