@@ -16,7 +16,8 @@ Artificial Neural Networks (ANN) were born in 1943, through a work by Warren McC
 
 <div style="text-align:center"><img src="/figures/mcculloch_fig1.jpg" width="350">
 </div>
-<p style="text-align: center;">Original Figure from McCulloch and Pitts. Source [1].</p>
+
+<div><p style="text-align: center;">Original Figure from McCulloch and Pitts. Source [1].</p></div>
 
 ### Rosenblatt's Perceptron
 
@@ -44,6 +45,8 @@ Simply put, the backpropagation algorithm is based on the chain rule, which allo
 With a new training methodology, research on ANN became active again. LeCun et. al. [11] developed a digit recognition system using data from the US Postal Service, and showed how ANN could be used to solve complex practical problems. LeCun system included a layer of convolutional neurons, which had been previously proposed by Fukushima in 1980 [12].
 
 ### Convolutional Neural Networks
+
+Convolutional Neural Networks (CNN) are based on a special type of neuron: convolutional neurons. Typically, convolutional neurons have a limited input, e.g., are only connected with a few neurons from the previous layer. Conv neurons assume the existence of a two-dimensional structure in the data, 
 
 Convolutional neurons implement the concept of "weight sharing", as several neurons of the same layer are defined by a common set of weights.
 
