@@ -23,6 +23,7 @@ In 1958,Frank Rosenblatt developed the "Perceptron" algorithm [2], which was bas
 
 $$
 Add the formula here
+f(x)=
 $$
 
 He implemented the algorithm within the machine "Mark I Perceptron", a visual classifier composed by 400 photosensitive receptors (sensory units), associated with 512 stepping motors (association units), and an output of 8 neurons (response units) [3].
