@@ -72,10 +72,10 @@ Convolving filters can have many effects. Averaging each pixel by its neighbors 
 
 
 <div style="text-align:center">
-    <img src="/figures/generic-taj-convmatrix-blur.jpg" width="350">
-    <img src="/figures/igeneric-taj-convmatrix-edge-detect.jpg" width="350">
+   <img src="/figures/convolution-blur.png" width="350"><img src="/figures/generic-taj-convmatrix-blur.jpg" width="350"><br>
+   <img src="/figures/convolution-edge-detect1.png" width="350"><img src="/figures/generic-taj-convmatrix-edge-detect.jpg" width="350">
 </div>
-<p style="text-align: center;">Left: convolved filter to blur image. Right: Convolved filter to detect edges. From [15].</p>
+<p style="text-align: center;">Top: convolved filter to blur image. Bottom: Convolved filter to detect edges. From [15].</p>
 
 #### CNN Parameters
 
@@ -84,16 +84,15 @@ The convolution process has many adjustable parameters. The kernel size is the m
 * Stride: When applying the same convolving filter over the image, the stride defines the number of steps to take. Minimum stride is 1.
 
 <div style="text-align:center">
-    <img src="/figures/Stride1.png" width="350">
-    <img src="/figures/Stride2.png" width="350">
+    <img src="/figures/Stride1.png" width="450"><br>
+    <img src="/figures/Stride2.png" width="450">
 </div>
-<p style="text-align: center;">Effect of a stride of 1 or 2 on the output volume.blur image, from [16].</p>
+<p style="text-align: center;">Effect of a stride of 1 or 2 on the output volume, from [16].</p>
 
-* Padding: Without padding, a convolving filter cannot be centered on the borders of an input, as there will be several missing datapoints. As a result, dimensionality decreases (see Stride example). Padding allows one to define default values (typically 0's a.k.a. zero-padding) for the datapoints outside the image. A stride of 1 and a padding fitting the kernel size (e.g., $kernelSize-1)/2$ for odd kernel sizes) produces outputs of equal size to the input.
+* Padding: Without padding, a convolving filter cannot be centered on the borders of an input, as there will be several missing datapoints. As a result, dimensionality decreases (see Stride example). Padding allows one to define default values (typically 0's a.k.a. zero-padding) for the datapoints outside the image. A stride of 1 and a zero-padding fitting the kernel size (e.g., $\frac{KernelSize-1)}{2}$ for odd kernel sizes) produces outputs of equal size to the input.
 
 <div style="text-align:center">
-    <img src="/figures/Stride1.png" width="350">
-    <img src="/figures/Stride2.png" width="350">
+    <img src="/figures/Pad.png" width="350">
 </div>
 <p style="text-align: center;">Example of zero-padding of 2, from [16].</p>
 
@@ -101,9 +100,16 @@ The formula for computing the output of a convolutional layer is:
 
 $$OutputSize = \frac{InputSize-KernelSize+2*Padding}{Stride}+1$$
 
+####Convolutional Volumes
 
+Although CNN are appropriate for any 2-dimensional type of input, in most cases these are applied to images. Color images, have three channels (RGB), and all three should be considered by any conv filter processing the input. For that purpose, convolutional filters are 3-dimensional where the width and height are defined by the kernel size, and the depth is 3. 
 
+<div style="text-align:center">
+    <img src="/figures/Figure_5.png" width="350">
+</div>
+<p style="text-align: center;">Example of zero-padding of 2, from [17].</p>
 
+A single conv filter applied over the whole input produces a 2-dimensional output. A slice of the output volume. That slice corresponds to the output of the various conv neurons sharing the weights of said conv filter. As a result, if we have 20 filters in a conv layer, the output of the layer will have a depth of 20, as each of those filters produces a 2-dimensional plane. An intuitive way of understanding such volume is 
 ## Bibliography
 
 [1] McCulloch, Warren S., and Walter Pitts. "A logical calculus of the ideas immanent in nervous activity." The bulletin of mathematical biophysics 5.4 (1943): 115-133.](http://vordenker.de/ggphilosophy/mcculloch_a-logical-calculus.pdf)
@@ -135,4 +141,5 @@ $$OutputSize = \frac{InputSize-KernelSize+2*Padding}{Stride}+1$$
 [14] [http://deeplearning.stanford.edu/wiki/index.php/Feature_extraction_using_convolution](http://deeplearning.stanford.edu/wiki/index.php/Feature_extraction_using_convolution)
 
 [15] [http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/](http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/)
-[16] [https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/]()
+[16] [https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/](https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
+[17] [http://xrds.acm.org/blog/2016/06/convolutional-neural-networks-cnns-illustrated-explanation/](http://xrds.acm.org/blog/2016/06/convolutional-neural-networks-cnns-illustrated-explanation/)
