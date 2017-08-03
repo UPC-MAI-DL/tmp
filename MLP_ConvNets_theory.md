@@ -8,6 +8,19 @@ permalink: /mlp-convnets-theory/
 
 This document contains the first theoretical part (1/4) of the Deep Learning subject at the Master in Artificial Inteligence of the Universitat Politècnica de Catalunya. It briefly reviews the basic concepts regarding Multilayer Perceptron (MLP) and Convolutional Neural Networks (CNNs).
 
+Table of Contents:
+
+- [A bit of history](#history)
+- [Rosenblatt's Perceptron](#rosenblatt)
+- [Backpropagation and Stochastic Gradient Descent](#backprop)
+- [Convolutional Neural Networks](#cnn)
+    - [CNN Parameters](#cnn_params)
+    - [CNN Volumes](#cnn_volumes)
+- [Bibliography](#bib)
+
+
+
+<a name='history'></a>
 ### A bit of history
 
 Neural networks have recently (i.e., 2010s) become a hot topic for both academia and industry. However, neural networks have been around for a while.
@@ -20,6 +33,7 @@ Artificial Neural Networks (ANN) were born in 1943, through a work by Warren McC
 
 <div><p style="text-align: center;">Original Figure from McCulloch and Pitts. Source [1].</p></div>
 
+<a name='rosenblatt'></a>
 ### Rosenblatt's Perceptron
 
 In 1958,Frank Rosenblatt developed the "Perceptron" algorithm [2], which was based on McCulloch and Pitts neurons. The algorithm was a binary classifier, mapping a real valued input to a single binary output.
@@ -40,6 +54,7 @@ Rosenblatt acknolwedged a set of limitations of his Perceptron machine in a seri
 
 Regardless of the technical aspects of Misnky and Papert's work, the reaction from the public was a drastic cut in funding on ANN during the 70s, until the mid 80s, in what is knows as the "AI Winter". After ANNs were almost abandoned, AI research focused on "expert systems" instead, which would also suffer their own "AI Winter" in the 90s.
 
+<a name='backprop'></a>
 ### Backpropagation and Stochastic Gradient Descent
 
 The backpropagation algorithm reignited the interest on ANN. Originally intended for ANN by Webos in 1974 [7], it gained attention when rediscovered by Rumelhart, Hinton and Williams in 1985 [8], and effectively finished the "AI Winter" on ANN.
@@ -48,6 +63,7 @@ Simply put, the backpropagation algorithm is based on the chain rule, which allo
 
 With a new training methodology, research on ANN became active again. LeCun et. al. [11] developed a digit recognition system using data from the US Postal Service, and showed how ANN could be used to solve complex practical problems. LeCun system included a layer of convolutional neurons, which had been previously proposed by Fukushima in 1980 [12].
 
+<a name='cnn'></a>
 ### Convolutional Neural Networks
 
 Convolutional Neural Networks (CNN) are based on a special type of neuron: convolutional neurons. Typically, convolutional neurons have a limited input, e.g., are only connected with a few neurons from the previous layer. Fully-connected neurons on the other hand are connected to all the neurons from the previous layer.
@@ -77,6 +93,7 @@ Convolving filters can have many effects. Averaging each pixel by its neighbors 
 </div>
 <p style="text-align: center;">Top: convolved filter to blur image. Bottom: Convolved filter to detect edges. From [15].</p>
 
+<a name='cnn_params'></a>
 #### CNN Parameters
 
 The convolution process has many adjustable parameters. The kernel size is the main one, and determines the patch of the image each filter will be able to process. The two other main parameters are the stride and the padding.
@@ -100,6 +117,7 @@ The formula for computing the output of a convolutional layer is:
 
 $$OutputSize = \frac{InputSize-KernelSize+2*Padding}{Stride}+1$$
 
+<a name='cnn_volumes'></a>
 ####Convolutional Volumes
 
 Although CNN are appropriate for any 2-dimensional type of input, in most cases these are applied to images. Color images, have three channels (RGB), and all three should be considered by any conv filter processing the input. For that purpose, convolutional filters are 3-dimensional where the width and height are defined by the kernel size, and the depth is 3. 
@@ -110,6 +128,9 @@ Although CNN are appropriate for any 2-dimensional type of input, in most cases 
 <p style="text-align: center;">Example of zero-padding of 2, from [17].</p>
 
 A single conv filter applied over the whole input produces a 2-dimensional output. A slice of the output volume. That slice corresponds to the output of the various conv neurons sharing the weights of said conv filter. As a result, if we have 20 filters in a conv layer, the output of the layer will have a depth of 20, as each of those filters produces a 2-dimensional plane. An intuitive way of understanding such volume is 
+
+
+<a name='bib'></a>
 ## Bibliography
 
 [1] [McCulloch, Warren S., and Walter Pitts. "A logical calculus of the ideas immanent in nervous activity." The bulletin of mathematical biophysics 5.4 (1943): 115-133.](http://vordenker.de/ggphilosophy/mcculloch_a-logical-calculus.pdf)
